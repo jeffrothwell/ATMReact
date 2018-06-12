@@ -31,6 +31,8 @@ export default class Account extends Component {
     e.preventDefault();
     if (isNaN(this.refs.amount.value)) {
       console.log("Not a number");
+    } else if (this.refs.amount.value < 0) {
+      console.log("Can't be negative");
     }
     else {
       let amount = +this.refs.amount.value;
